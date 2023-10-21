@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 
 struct WeatherManager {
@@ -13,6 +14,10 @@ struct WeatherManager {
     var delegate : WeatherManagerDelegate?
     func fetchWeather(cityName: String) {
         let urlString = "\(weatherUrl)\(cityName)"
+        performRequest(with: urlString)
+    }
+    func fetchWeatherByLatLong(lat: CLLocationDegrees,long: CLLocationDegrees) {
+        let urlString = "\(weatherUrl)\(lat),\(long)"
         performRequest(with: urlString)
     }
     
