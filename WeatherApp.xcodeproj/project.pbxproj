@@ -17,6 +17,8 @@
 		614503202AD54E7800C650E6 /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145031F2AD54E7800C650E6 /* WeatherAppUITestsLaunchTests.swift */; };
 		614503302AD564CC00C650E6 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6145032F2AD564CC00C650E6 /* WeatherViewController.swift */; };
 		617058EA2ADFE998002E429C /* weatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617058E92ADFE998002E429C /* weatherManager.swift */; };
+		61A34BC52AE3D42B00FA6465 /* doubleToNumOfPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A34BC42AE3D42B00FA6465 /* doubleToNumOfPlaces.swift */; };
+		61A34BC72AE3D99000FA6465 /* buttonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A34BC62AE3D99000FA6465 /* buttonExtension.swift */; };
 		61B75AE12AE1183600AE513B /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B75ADD2AE1183600AE513B /* WeatherDataModel.swift */; };
 		61B75AE22AE1183600AE513B /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B75ADE2AE1183600AE513B /* Current.swift */; };
 		61B75AE32AE1183600AE513B /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B75ADF2AE1183600AE513B /* Condition.swift */; };
@@ -57,6 +59,8 @@
 		6145031F2AD54E7800C650E6 /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6145032F2AD564CC00C650E6 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		617058E92ADFE998002E429C /* weatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherManager.swift; sourceTree = "<group>"; };
+		61A34BC42AE3D42B00FA6465 /* doubleToNumOfPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doubleToNumOfPlaces.swift; sourceTree = "<group>"; };
+		61A34BC62AE3D99000FA6465 /* buttonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonExtension.swift; sourceTree = "<group>"; };
 		61B75ADD2AE1183600AE513B /* WeatherDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		61B75ADE2AE1183600AE513B /* Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
 		61B75ADF2AE1183600AE513B /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		614502FB2AD54E7700C650E6 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				61A34BC32AE3D40C00FA6465 /* extensions */,
 				61B75AE92AE13ACE00AE513B /* protocol */,
 				6145032E2AD5649400C650E6 /* Models */,
 				6145032D2AD5648900C650E6 /* View */,
@@ -170,6 +175,15 @@
 				61B75AE72AE132A100AE513B /* weatherModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		61A34BC32AE3D40C00FA6465 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				61A34BC42AE3D42B00FA6465 /* doubleToNumOfPlaces.swift */,
+				61A34BC62AE3D99000FA6465 /* buttonExtension.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 		61B75AE92AE13ACE00AE513B /* protocol */ = {
@@ -318,7 +332,9 @@
 				61B75AE42AE1183600AE513B /* Location.swift in Sources */,
 				61B75AE32AE1183600AE513B /* Condition.swift in Sources */,
 				617058EA2ADFE998002E429C /* weatherManager.swift in Sources */,
+				61A34BC52AE3D42B00FA6465 /* doubleToNumOfPlaces.swift in Sources */,
 				61B75AE22AE1183600AE513B /* Current.swift in Sources */,
+				61A34BC72AE3D99000FA6465 /* buttonExtension.swift in Sources */,
 				61B75AE12AE1183600AE513B /* WeatherDataModel.swift in Sources */,
 				614502FF2AD54E7700C650E6 /* SceneDelegate.swift in Sources */,
 			);

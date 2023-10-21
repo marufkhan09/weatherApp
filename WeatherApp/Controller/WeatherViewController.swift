@@ -7,16 +7,8 @@
 
 import UIKit
 //added uiTextfield delegate to notify viewcontroller whats happening
-class WeatherViewController: UIViewController, UITextFieldDelegate,WeatherManagerDelegate {
-    func didFailWithError(error: Error) {
-        print(error )
-    }
+class WeatherViewController: UIViewController{
     
-    func didUpdateWeather(_ weather: WeatherModel) {
-        conditionImageView.image = UIImage(named: weather.conditionName)
-        temperatureLabel.text = weather.tempString
-        cityLabel.text = weather.cityName
-    }
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var conditionImageView: UIImageView!
@@ -33,6 +25,12 @@ class WeatherViewController: UIViewController, UITextFieldDelegate,WeatherManage
         
     }
     
+}
+
+//MARK: - UITextFieldDelegate
+
+
+extension WeatherViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.endEditing(true)
         print(searchTextField.text!)
@@ -43,12 +41,30 @@ class WeatherViewController: UIViewController, UITextFieldDelegate,WeatherManage
             weather.fetchWeather(cityName: city)
             
         }
-       
         searchTextField.text = ""
     }
-
+    
     @IBAction func searchPressed(_ sender: Any) {
         searchTextField.endEditing(true)
         print(searchTextField.text!)
     }
 }
+
+//MARK: - WeatherManagerDelegate
+
+extension WeatherViewController: WeatherManagerDelegate {
+    func didFailWithError(error: Error) {
+        print(error )
+    }
+    
+    func didUpdateWeather(_ weather: WeatherModel) {
+        DispatchQueue.main.async {
+            self.conditionImageView.image = UIImage(named: weather.conditionName)
+            self.temperatureLabel.text = weather.tempString
+            self.cityLabel.text = weather.cityName
+        }
+    }
+}
+
+
+

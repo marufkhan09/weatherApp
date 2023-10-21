@@ -14,7 +14,7 @@ struct WeatherModel {
     let temp : Double
     
     var tempString : String{
-        return String(format: "%.1f", temp)
+        return String(temp.round(to: 1))
     }
     
     var conditionName: String {
