@@ -69,7 +69,7 @@ extension WeatherViewController: WeatherManagerDelegate {
     
     func didUpdateWeather(_ weather: WeatherModel) {
         DispatchQueue.main.async {
-            self.conditionImageView.image = UIImage(named: weather.conditionName)
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.temperatureLabel.text = weather.tempString
             self.cityLabel.text = weather.cityName
         }
